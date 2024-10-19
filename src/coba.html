@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Document</title>
+    <style>
+      body {
+        background-color: #0d4f7d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .card {
+        width: 300px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        position: relative;
+      }
+
+      .file-preview {
+        background-color: #f8f8f8;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: -40px;
+        width: 80px;
+        height: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .file-preview img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .file-name {
+        margin-top: 60px;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .progress-bar {
+        width: 100%;
+        height: 8px;
+        background-color: #e0e0e0;
+        border-radius: 4px;
+        margin: 20px 0;
+        overflow: hidden;
+      }
+
+      .progress-bar-fill {
+        height: 100%;
+        width: 0%;
+        background-color: #007bff;
+        border-radius: 4px;
+        transition: width 0.4s ease;
+      }
+
+      .upload-status {
+        font-size: 14px;
+        color: #666;
+        margin-top: 5px;
+      }
+
+      .upload-button {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 25px;
+        font-size: 14px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      .upload-button:hover {
+        background-color: #333;
+      }
+    </style>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="file-preview top-0">
+        <img src="../svg/upload.svg" alt="File Icon">
+      </div>
+      <p class="file-name" id="file-name">No file selected</p>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="progress-bar-fill"></div>
+      </div>
+      <p class="upload-status" id="upload-status">Uploading ... 0%</p>
+      <button class="upload-button" id="upload-button">Upload New Document</button>
+      <input type="file" id="file-input" style="display: none;" />
+    </div>
+
+      <!-- <div class="grid grid-cols-3 gap-4">
+        <div class="card bg-orange-50 py-8 px-5 rounded-md absolute items-center justify-center">
+          <div class="bg-white shadow-lg rounded-xl justify-center items-center p-6 top-16 relative z-10">
+            <div class="flex items-center mb-6">
+              <div class="flex items-center text-blue-600">
+                <div class="rounded-full bg-blue-600 text-white w-8 h-8 flex justify-center items-center">1</div>
+                <span class="ml-2 text-blue-600 font-semibold">Visa Information</span>
+              </div>
+              <div class="flex-grow border-t border-gray-300 mx-4"></div>
+              <div class="flex items-center text-gray-400">
+                <div class="rounded-full bg-gray-300 text-white w-8 h-8 flex justify-center items-center">2</div>
+                <span class="ml-2 text-gray-400 font-semibold">User Information</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-orange-50 py-8 px-5 rounded-md absolute items-center justify-center">
+          <div class="bg-white shadow-lg rounded-xl justify-center items-center p-6 top-16 relative z-10">
+            <div class="flex items-center mb-6">
+              <div class="flex items-center text-blue-600">
+                <div class="rounded-full bg-blue-600 text-white w-8 h-8 flex justify-center items-center">1</div>
+                <span class="ml-2 text-blue-600 font-semibold">Visa Information</span>
+              </div>
+              <div class="flex-grow border-t border-gray-300 mx-4"></div>
+              <div class="flex items-center text-gray-400">
+                <div class="rounded-full bg-gray-300 text-white w-8 h-8 flex justify-center items-center">2</div>
+                <span class="ml-2 text-gray-400 font-semibold">User Information</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-orange-50 py-8 px-5 rounded-md absolute items-center justify-center">
+          <div class="bg-white shadow-lg rounded-xl justify-center items-center p-6 top-16 relative z-10">
+            <div class="flex items-center mb-6">
+              <div class="flex items-center text-blue-600">
+                <div class="rounded-full bg-blue-600 text-white w-8 h-8 flex justify-center items-center">1</div>
+                <span class="ml-2 text-blue-600 font-semibold">Visa Information</span>
+              </div>
+              <div class="flex-grow border-t border-gray-300 mx-4"></div>
+              <div class="flex items-center text-gray-400">
+                <div class="rounded-full bg-gray-300 text-white w-8 h-8 flex justify-center items-center">2</div>
+                <span class="ml-2 text-gray-400 font-semibold">User Information</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    
+   
+      
+    <script>
+      const fileInput = document.getElementById('file-input');
+      const uploadButton = document.getElementById('upload-button');
+      const fileNameDisplay = document.getElementById('file-name');
+      const progressBarFill = document.getElementById('progress-bar-fill');
+      const uploadStatus = document.getElementById('upload-status');
+
+      // Buka dialog pilih file saat tombol ditekan
+      uploadButton.addEventListener('click', () => fileInput.click());
+
+      fileInput.addEventListener('change', () => {
+        const file = fileInput.files[0];
+        if (file) {
+          fileNameDisplay.textContent = file.name;
+          simulateUpload();
+        }
+      });
+
+      function simulateUpload() {
+        let progress = 0;
+        const interval = setInterval(() => {
+          progress += 10;
+          progressBarFill.style.width = ${progress}%;
+          uploadStatus.textContent = Uploading ... ${progress}%;
+
+          if (progress >= 100) {
+            clearInterval(interval);
+            uploadStatus.textContent = 'Upload complete!';
+          }
+        }, 300);
+      }
+    </script>
+  </body>
+</html>

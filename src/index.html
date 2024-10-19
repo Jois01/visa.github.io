@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="bg-slate-900 text-white rounded-md shadow-lg fixed top-4 left-0 right-0 mx-8 z-20">
+      <div class="flex justify-between items-center py-4 px-8">
+        <!-- Logo -->
+        <div class="text-white font-bold text-xl">Visa Indonesia</div>
+        <div class="flex items-center space-x-8">
+          <a href="#" class="hover:text-gray-300">Home</a>
+
+          <!-- Dropdown 1: Visa Services -->
+          <div class="relative inline-block text-left">
+            <button id="dropdownButton1" onclick="toggleDropdown('dropdownMenu1')" class="flex items-center px-4 py-2 text-sm font-medium text-white hover:text-gray-300 focus:outline-none">
+              Visa Services
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div id="dropdownMenu1" class="hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+              <div class="py-1">
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Visa Application</a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Visa Status</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dropdown 2: Extend Visa -->
+          <div class="relative inline-block text-left">
+            <button id="dropdownButton2" onclick="toggleDropdown('dropdownMenu2')" class="flex items-center px-4 py-2 text-sm font-medium text-white hover:text-gray-300 focus:outline-none">
+              Extend Visa
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div id="dropdownMenu2" class="hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+              <div class="py-1">
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Extend Tourist Visa</a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Extend Business Visa</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dropdown 3: Information Center -->
+          <div class="relative inline-block text-left">
+            <button id="dropdownButton3" onclick="toggleDropdown('dropdownMenu3')" class="flex items-center px-4 py-2 text-sm font-medium text-white hover:text-gray-300 focus:outline-none">
+              Information Center
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div id="dropdownMenu3" class="hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+              <div class="py-1">
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">FAQs</a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact Us</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="hover:text-gray-300">About Us</a>
+          <a href="#" class="bg-white text-black rounded-md px-4 py-2 font-semibold hover:bg-gray-200">MY ACCOUNT</a>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="flex flex-col justify-center h-screen items-center">
+      <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap- xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div class="mr-auto place-self-center lg:col-span-7">
+          <h1 class="max-w-2xl mb-4 text-4xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, officiis.</h1>
+          <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos fugit consectetur nostrum esse maiores temporibus culpa eveniet deserunt facilis similique..
+          </p>
+          <div class="button my-4 gap-8 flex">
+            <a class="rounded-md text-blackbal text-center py-2 px-6 shadow-lg shadow-black hover:bg-white hover:text-black bg-black text-white cursor-pointer m-2" href="#"> get visa now </a>
+            <p class="py-2 mt-2">or</p>
+            <a class="rounded-md text-blackbal text-center py-2 px-6 shadow-lg shadow-black hover:bg-black hover:text-white bg-white text-black cursor-pointer m-2 border border-gray-200 hover:border-black" href="#"> extend my visa </a>
+          </div>
+        </div>
+        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+          <img src="../img/header.png" alt="mockup" />
+        </div>
+      </div>
+    </section>
+
+    <section class="flex flex-col justify-center h-screen items-center text-center bg-gray-200">
+      <div class="text-center m-4">
+        <h3>Lorem ipsum dolor sit amet.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, repellendus.</p>
+      </div>
+      <div class="grid grid-flow-col grid-cols-3 gap-4 m-4">
+        <div class="bg-gray-900 text-white rounded-md shadow-md p-4">
+          <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
+        </div>
+        <div class="bg-gray-900 text-white rounded-md shadow-md p-4">
+          <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
+        </div>
+        <div class="bg-gray-900 text-white rounded-md shadow-md p-4">
+          <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex flex-col justify-center h-screen items-center text-center bg-white">
+      <div class="text-center m-4">
+        <p class="text-sm font-bold">Lorem ipsum dolor sit amet.</p>
+        <h3 class="text-xl font-bold">Lorem ipsum dolor sit amet.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, repellendus.</p>
+      </div>
+      <div class="grid grid-flow-col grid-cols gap-4 m-4">
+        <div class="bg-white text-black rounded-md shadow-md p-4">
+          <div class="w-9 justify-center items-center">
+            <img src="../svg/target.svg" alt="" />
+          </div>
+          <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, deserunt!</p>
+        </div>
+        <div class="bg-white text-black rounded-md shadow-md p-4">
+          <div class="w-9 justify-center items-center">
+            <img src="../svg/target.svg" alt="" />
+          </div>
+          <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, deserunt!</p>
+        </div>
+      </div>
+      <div class="grid grid-flow-col grid-cols gap-4 m-4">
+        <div class="bg-white text-black rounded-md shadow-md p-4 justify-center items-center">
+          <div class="w-9 justify-center items-center">
+            <img src="../svg/target.svg" alt="" />
+          </div>
+          <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, deserunt!</p>
+        </div>
+        <div class="bg-white text-black rounded-md shadow-md p-4">
+          <div class="w-9 justify-center items-center">
+            <img src="../svg/target.svg" alt="" />
+          </div>
+          <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, deserunt!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex flex-col justify-center py-16 items-center text-center bg-cyan-900">
+      <div class="text-center text-white m-4">
+        <h3 class="text-2xl font-bold">Less effort to get your visa</h3>
+        <p>Our service ensures that you can acquire your visa with ease, saving you time and energy, so you can focus on planning and enjoying your trip without complicated paperwork and procedures.</p>
+      </div>
+    
+      <div class="grid gap-16 md:grid-cols-4">
+        <!-- Card 1 -->
+        <div class="card ">
+          <div class="bg-orange-50 py-8 px-8 rounded-md relative flex items-center justify-center ">
+            <div class="bg-white shadow-lg rounded-xl  p-6 top-16 relative text-xs z-10">
+              <div class="flex items-center mb-6 text-sm">
+                <div class="flex items-center text-blue-600">
+                  <div class="rounded-full bg-blue-600 text-white p-1 flex justify-center items-center">1</div>
+                  <span class="ml-2 text-blue-600 font-semibold">Visa Information</span>
+                </div>
+                <div class="flex-grow border-t border-gray-300 mx-4"></div>
+                <div class="flex items-center text-gray-400">
+                  <div class="rounded-full bg-gray-300 text-white flex p-1 justify-center items-center">2</div>
+                  <span class="ml-2 text-gray-400 font-semibold">User Information</span>
+                </div>
+              </div>
+          
+              <!-- Dropdown Select -->
+              <div class="mb-4">
+                <label class="block text-gray-700 text-sm mb-2">Services</label>
+                <div class="relative">
+                  <select class="block appearance-none w-full bg-white border border-gray-300 hover:border-gray-400 px-4 py-3 pr-8 rounded-md shadow-sm focus:outline-none focus:ring focus:border-blue-500">
+                    <option>New Visa</option>
+                    <option>B211A Visa</option>
+                    <option>E-Visa on Arrival</option>
+                  </select>
+                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                    <svg class="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="text-center text-white font-bold text-lg mt-4">Online Registration</div>
+          <div class="text-center text-white">Begin the visa application process by completing an online form and providing all necessary information.</div>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="card">
+          <div class="bg-orange-50 py-8 px-8 rounded-md flex relative items-center justify-center">
+              <div class="file-preview top-0 rounded-md p-2 -mt-40 -t-10 bg-white absolute">
+                <img src="../svg/upload.svg" alt="File Icon">
+              </div>
+              <p class="file-name" id="file-name">No file selected</p>
+              <div class="progress-bar">
+                <div class="progress-bar-fill bg-cyan-500 rounded-md " id="progress-bar-fill"></div>
+              </div>
+              <p class="upload-status" id="upload-status mt-2">Uploading ... 0%</p>
+              <button class="upload-button" id="upload-button">Upload New Document</button>
+              <input type="file" id="file-input" style="display: none;" />
+          </div>
+          <div class="text-center text-white font-bold text-lg mt-4">Submit Document</div>
+          <div class="text-center text-white">After registration, upload the required documents for your visa application.</div>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="card">
+          <div class="bg-orange-50 py-8 px-8 rounded-md flex items-center justify-center">
+            <div class="bg-white shadow-lg rounded-xl p-6 text-xs z-10">
+              <div class="flex items-center mb-6">
+                <div class="flex items-center text-blue-600">
+                  <div class="rounded-full bg-blue-600 text-white w-8 h-8 flex justify-center items-center">3</div>
+                  <span class="ml-2 text-blue-600 font-semibold">Make Payment</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center text-white font-bold text-lg mt-4">Make Payment</div>
+          <div class="text-center text-white">Once documents are submitted, proceed to make the payment for the application.</div>
+        </div>
+    
+        <!-- Card 4 -->
+        <div class="card">
+          <div class="bg-orange-50 py-8 px-8 rounded-md flex items-center justify-center">
+            <div class="bg-white shadow-lg rounded-xl p-6 text-xs z-10">
+              <div class="flex items-center mb-6">
+                <div class="flex items-center text-blue-600">
+                  <div class="rounded-full bg-blue-600 text-white w-8 h-8 flex justify-center items-center">4</div>
+                  <span class="ml-2 text-blue-600 font-semibold">Get Visa</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center text-white font-bold text-lg mt-4">Get Visa</div>
+          <div class="text-center text-white">After successful verification and payment, you will receive your visa.</div>
+        </div>
+      </div>
+    </section>
+    
+    
+
+    <section id="" class="flex flex-col justify-center h-screen items-center text-center">
+      <div class="text-center text-black m-4">
+        <h3 class="text-2xl font-bold">Lorem ipsum dolor sit amet.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, repellendus.</p>
+      </div>
+      <div class="grid grid-cols-3 gap-4 m-4 justify-center items-center text-black">
+        <div class="rounded-md shadow-md p-4 border border-gray-200">
+          <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
+        </div>
+        <div class="rounded-md shadow-md p-4 border border-gray-200">
+          <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
+        </div>
+        <div class="rounded-md shadow-md p-4 border border-gray-200">
+          <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4 m-4 justify-center items-center text-black">
+        <div class="rounded-md shadow-md p-4 border border-gray-200">
+          <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
+        </div>
+        <div class="rounded-md shadow-md p-4 border border-gray-200">
+          <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
+        </div>
+      </div>
+    </section>
+    <section class="flex flex-col justify-center h-screen items-center">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 m-4">
+        <div class="p-4">
+          <h1 class="max-w-2xl mb-4 text-4xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, officiis.</h1>
+          <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos fugit consectetur nostrum esse maiores temporibus culpa eveniet deserunt facilis similique..
+          </p>
+          <a class="rounded-md text-blackbal text-center py-2 px-6 shadow-lg shadow-black hover:bg-white hover:text-black bg-black text-white cursor-pointer m-2" href="#"> FIND SERVICES YOU NEED </a>
+        </div>
+        <div class="p-4">
+          <img src="../img/hp2.png" alt="mockup" />
+        </div>
+      </div>
+    </section>
+    <section class="flex flex-col justify-center items-center">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 m-4">
+        <div class="p-4">
+          <h1 class="mb-4 text-xl font-bold tracking-tight leading-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, officiis.</h1>
+          <p class="max-w-2xl mb-6 font-light text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos fugit consectetur nostrum esse maiores temporibus culpa eveniet deserunt facilis similique..</p>
+          <div class="bg-white border border-gray-200 rounded-md py-10">
+            <img src=".." alt="" />
+            <p class="font-bold m-2 ml-4">lorem ipsum</p>
+            <p class="m-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, id.</p>
+            <a class="rounded-full text-blackbal text-center py-2 px-6 shadow-lg shadow-black hover:bg-white hover:text-black bg-black text-white cursor-pointer m-2" href="#">GET IN TOUCH</a>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="p-4 m-4 bg-gray-100 py-4 px-10 rounded-md">
+            <p class="mb-4 font-bold text-xl">Lorem ipsum dolor sit amet.</p>
+            <div>
+              <ol class="list-decimal m-2">
+                <li class="m-2">Now this is a story all about how, my life got flipped-turned upside down</li>
+                <li class="m-2">Now this is a story all about how, my life got flipped-turned upside down</li>
+                <li class="m-2">Now this is a story all about how, my life got flipped-turned upside down</li>
+                <li class="m-2">Now this is a story all about how, my life got flipped-turned upside down</li>
+                <li class="m-2">Now this is a story all about how, my life got flipped-turned upside down</li>
+                <li class="m-2">Now this is a story all about how, my life got flipped-turned upside down</li>
+                <li class="m-2">Now this is a story all about how, my life got flipped-turned upside down</li>
+              </ol>
+            </div>
+          </div>
+          <div class="p-4 m-4 py-4">
+            <p class="m-2">Lorem ipsum dolor sit amet.</p>
+            <p class="m-2">Lorem ipsum dolor sit amet.</p>
+            <p class="m-2">Lorem ipsum dolor sit amet.</p>
+            <p class="m-2">Lorem ipsum dolor sit amet.</p>
+            <p class="m-2">Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-black text-white py-52">
+      <div class="p-4 text-center">
+        <h1 class="mb-4 text-2xl font-bold tracking-tight leading-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, officiis.</h1>
+        <p class="mb-4 font-light text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="button my-4 gap-8 flex items-center justify-center">
+        <a class="rounded-full text-blackbal text-center py-2 px-6 shadow-lg shadow-black hover:bg-cyan-700 hover:text-white bg-white text-black cursor-pointer m-2" href="#"> FIND SERVICES</a>
+        <a class="rounded-full text-blackbal text-center py-2 px-6 shadow-lg shadow-black hover:bg-white hover:text-black bg-cyan-700 text-white cursor-pointer m-2" href="#">CONSULT NOW </a>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function toggleDropdown(menuId) {
+      const dropdownMenu = document.getElementById(menuId);
+      dropdownMenu.classList.toggle("hidden");
+    }
+
+    window.onclick = function (event) {
+      const dropdownButtons = document.querySelectorAll("button[id^='dropdownButton']");
+      if (![...dropdownButtons].includes(event.target)) {
+        const dropdowns = document.querySelectorAll("div[id^='dropdownMenu']");
+        dropdowns.forEach((dropdown) => {
+          if (!dropdown.classList.contains("hidden")) {
+            dropdown.classList.add("hidden");
+          }
+        });
+      }
+    };
+  </script>
+</html>
