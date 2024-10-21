@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      
+    },
+    fontFamily: {
+      'mono': ['"Ubuntu Mono", monospace'],
+      'serif': ['"Plus Jakarta Sans", sans-serif;'],
+    },
+   
   },
   plugins: [],
 }

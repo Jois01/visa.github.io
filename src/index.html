@@ -4,82 +4,145 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
+    <!-- font1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+
+    <!-- font2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
   </head>
-  <body>
+  <body class="font-serif">
     <nav class="bg-slate-900 text-white rounded-md shadow-lg fixed top-4 left-0 right-0 mx-8 z-20">
       <div class="flex justify-between items-center py-2 px-8">
         <!-- Logo -->
         <div class="text-white font-bold text-xl">Visa Indonesia</div>
-        <div class="flex items-center space-x-8">
-          <a href="#" class="hover:text-gray-300">Home</a>
 
-          <!-- Dropdown 1: Visa Services -->
-          <div class="relative inline-block text-left">
-            <button id="dropdownButton1" onclick="toggleDropdown('dropdownMenu1')" class="flex items-center px-4 py-2 text-sm font-medium text-white hover:text-gray-300 focus:outline-none">
-              Visa Services
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-              </svg>
-            </button>
-            <div id="dropdownMenu1" class="hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-              <div class="py-1">
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Visa Application</a>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Visa Status</a>
+        <!-- Desktop Menu -->
+        <div class="hidden md:block">
+          <div class="flex items-center space-x-8">
+            <a href="#" class="hover:text-gray-300">Home</a>
+
+            <!-- Dropdown 1: Visa Services -->
+            <div class="relative inline-block text-left">
+              <button id="dropdownButton1" onclick="toggleDropdown('dropdownMenu1')" class="flex items-center px-4 py-2 text-sm font-medium text-white hover:text-gray-300 focus:outline-none">
+                Visa Services
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div id="dropdownMenu1" class="hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                <div class="py-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Visa Application</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Visa Status</a>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Dropdown 2: Extend Visa -->
-          <div class="relative inline-block text-left">
-            <button id="dropdownButton2" onclick="toggleDropdown('dropdownMenu2')" class="flex items-center px-4 py-2 text-sm font-medium text-white hover:text-gray-300 focus:outline-none">
-              Extend Visa
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-              </svg>
-            </button>
-            <div id="dropdownMenu2" class="hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-              <div class="py-1">
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Extend Tourist Visa</a>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Extend Business Visa</a>
+            <!-- Dropdown 2: Extend Visa -->
+            <div class="relative inline-block text-left">
+              <button id="dropdownButton2" onclick="toggleDropdown('dropdownMenu2')" class="flex items-center px-4 py-2 text-sm font-medium text-white hover:text-gray-300 focus:outline-none">
+                Extend Visa
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div id="dropdownMenu2" class="hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                <div class="py-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Extend Tourist Visa</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Extend Business Visa</a>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Dropdown 3: Information Center -->
-          <div class="relative inline-block text-left">
-            <button id="dropdownButton3" onclick="toggleDropdown('dropdownMenu3')" class="flex items-center px-4 py-2 text-sm font-medium text-white hover:text-gray-300 focus:outline-none">
-              Information Center
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-              </svg>
-            </button>
-            <div id="dropdownMenu3" class="hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-              <div class="py-1">
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">FAQs</a>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact Us</a>
+            <!-- Dropdown 3: Information Center -->
+            <div class="relative inline-block text-left">
+              <button id="dropdownButton3" onclick="toggleDropdown('dropdownMenu3')" class="flex items-center px-4 py-2 text-sm font-medium text-white hover:text-gray-300 focus:outline-none">
+                Information Center
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div id="dropdownMenu3" class="hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                <div class="py-1">
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">FAQs</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact Us</a>
+                </div>
               </div>
             </div>
-          </div>
+            <a href="#" class="hover:text-gray-300">About Us</a>
 
-          <a href="#" class="hover:text-gray-300">About Us</a>
-          <div class="flex bg-white text-black rounded-md px-4 py-2 font-semibold hover:bg-gray-200 ">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-2 size-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            <div class="flex bg-white text-black rounded-md px-4 py-2 font-semibold hover:bg-gray-200">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-2 size-6">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                />
+              </svg>
+              <a href="#">MY ACCOUNT</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div id="mobile-menu" class="md:hidden flex items-center">
+          <button class="p-2 rounded-md text-white focus:outline-none hover:bg-gray-700" onclick="toggleMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
-            <a href="#" class="">MY ACCOUNT</a>
-            
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="menu-dropdown-mobile" class="hidden md:hidden flex flex-col bg-slate-900 py-4">
+        <a href="#" class="block py-2 px-4 text-white hover:bg-gray-700">Home</a>
+        <div class="relative w-full text-left">
+          <button id="dropdownButtonMobile1" onclick="toggleDropdown('dropdownMenuMobile1')" class="w-full text-left px-4 py-2 text-white font-medium hover:bg-gray-700">Visa Services</button>
+          <div id="dropdownMenuMobile1" class="hidden w-full bg-white rounded-md shadow-lg">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Visa Application</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Visa Status</a>
           </div>
+        </div>
+
+        <div class="relative w-full text-left">
+          <button id="dropdownButtonMobile2" onclick="toggleDropdown('dropdownMenuMobile2')" class="w-full text-left px-4 py-2 text-white font-medium hover:bg-gray-700">Extend Visa</button>
+          <div id="dropdownMenuMobile2" class="hidden w-full bg-white rounded-md shadow-lg">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Extend Tourist Visa</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Extend Business Visa</a>
+          </div>
+        </div>
+
+        <div class="relative w-full text-left">
+          <button id="dropdownButtonMobile3" onclick="toggleDropdown('dropdownMenuMobile3')" class="w-full text-left px-4 py-2 text-white font-medium hover:bg-gray-700">Information Center</button>
+          <div id="dropdownMenuMobile3" class="hidden w-full bg-white rounded-md shadow-lg">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">FAQs</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Contact Us</a>
+          </div>
+        </div>
+
+        <a href="#" class="block py-2 px-4 text-white hover:bg-gray-700">About Us</a>
+        <div class="flex bg-white text-black rounded-md px-2 py-2 m-4 font-semibold hover:bg-gray-200">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-2 size-6">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+            />
+          </svg>
+          <a href="#">MY ACCOUNT</a>
         </div>
       </div>
     </nav>
 
-    <section id="home" class="flex flex-col justify-center h-screen items-center ">
+    <section id="home" class="flex flex-col justify-center h-screen items-center">
       <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap- xl:gap-0 lg:py-16 lg:grid-cols-12">
-        <div class="mr-auto place-self-center lg:col-span-7">
-          <h1 class="max-w-2xl mb-4 text-4xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, officiis.</h1>
-          <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos fugit consectetur nostrum esse maiores temporibus culpa eveniet deserunt facilis similique..
-          </p>
+        <div class="ml-20 place-self-center lg:col-span-7">
+          <h1 class="max-w-2xl mb-4 text-6xl tracking-tight leading-none md:text-4xl xl:text-5xl dark:text-white font-mono">Visa application made simple, apply now!</h1>
+          <p class="max-w-xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Say goodbye to cumbersome paperwork and endless queues, and say hello to a hassle-free travel experience</p>
           <div class="button my-4 gap-8 flex">
             <a class="rounded-md text-blackbal text-center py-2 px-6 shadow-lg shadow-black hover:bg-white hover:text-black bg-black text-white cursor-pointer m-2" href="#"> get visa now </a>
             <p class="py-2 mt-2">or</p>
@@ -92,86 +155,111 @@
       </div>
     </section>
 
-    <section id="one-stop" class="flex flex-col justify-center items-center text-center bg-gray-200 p-4">
-      <div class="text-center m-4">
-        <h3>Lorem ipsum dolor sit amet.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, repellendus.</p>
+    <section id="one-stop" class="flex flex-col justify-center items-center text-center bg-gray-200 p-16">
+      <div class="text-center m-10">
+        <p class="text-4xl font-mono">One-stop Visa in Indonesia</p>
+        <p class="m-4">We offers services that hassle-free and streamlined process for obtaining visas to enter and stay in Indonesia.</p>
       </div>
       <div class="grid grid-cols gap-4 m-4 md:grid-cols-3">
-        <div class="bg-gray-900 text-white rounded-md shadow-md p-4 items-center justify-center ">
-          <img src="../svg/target.svg" alt="" class="w-10 items-center justify-center m-20 ml-44" />
+        <div class="bg-gray-900 text-white rounded-md shadow-md p-10 items-center justify-center text-left">
+          <div class="flex justify-center items-center h-24">
+            <img src="../img/arrow.png" alt="" class="w-28" />
+          </div>
           <div class="content">
-            <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptatibus sint laudantium, quibusdam similique nisi quaerat amet rerum qui natus.</p>
+            <h4 class="text-lg font-bold mt-10">B211A</h4>
+            <p>Experience a streamlined visa process with B211A, your gateway to hassle-free travel arrangements.</p>
+            <a href="#" class="flex mt-4 mb-2 font-bold items-start"
+              >Get Now
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 ml-2 mt-1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+              </svg>
+            </a>
           </div>
         </div>
-        <div class="bg-gray-900 text-white rounded-md shadow-md p-4 items-center justify-center">
-          <img src="../svg/target.svg" alt="" class="w-10 items-center justify-center m-20 ml-44" />
+        <div class="bg-gray-900 text-white rounded-md shadow-md p-10 items-center justify-center text-left">
+          <div class="flex justify-center items-center h-24">
+            <img src="../img/internet.png" alt="" class="w-28" />
+          </div>
           <div class="content">
-            <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptatibus sint laudantium, quibusdam similique nisi quaerat amet rerum qui natus.</p>
+            <h4 class="text-lg font-bold mt-10">Visa on Arrival</h4>
+            <p>Simplify your entry experience with visa on arrival, ensuring a smooth start to your journey.</p>
+            <a href="#" class="flex mt-4 mb-2 font-bold items-start"
+              >Get Now
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 ml-2 mt-1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+              </svg>
+            </a>
           </div>
         </div>
-        <div class="bg-gray-900 text-white rounded-md shadow-md p-4 items-center justify-center">
-          <img src="../svg/target.svg" alt="" class="w-10 items-center justify-center m-20 ml-44" />
+        <div class="bg-gray-900 text-white rounded-md shadow-md p-10 items-center justify-center text-left">
+          <div class="flex justify-center items-center h-24">
+            <img src="../img/file.png" alt="" class="w-24" />
+          </div>
           <div class="content">
-            <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptatibus sint laudantium, quibusdam similique nisi quaerat amet rerum qui natus.</p>
+            <h4 class="text-lg font-bold mt-10">Extend Visa</h4>
+            <p>Extend your stay and make the most of your travel adventure with our convenient visa extension services.</p>
+            <a href="#" class="flex mt-4 mb-2 font-bold items-start"
+              >Get Now
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 ml-2 mt-1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="flex flex-col justify-center items-center text-center bg-white p-4">
-      <div class="text-center m-4">
-        <p class="text-sm font-bold">Lorem ipsum dolor sit amet.</p>
-        <h3 class="text-xl font-bold">Lorem ipsum dolor sit amet.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, repellendus.</p>
+    <section id="choose-Visa" class="flex flex-col justify-center items-center text-center bg-white p-4">
+      <div class="text-center items-center justify-center m-4 mt-10 " style="width: 600px;">
+        <p class="text-sm font-bold m-2">1000+ Customer Order</p>
+        <h3 class="text-3xl font-mono">Why you should choose</h3>
+        <h3 class="text-3xl font-mono">Visa Indonesia Official</h3>
+        <p class="m-2">Explore the Compelling Reasons to Choose Visa Indonesia Official for Your Visa and Travel Needs</p>
       </div>
-      <div class="grid grid-flow-col grid-cols gap-4 m-4">
-        <div class="bg-white text-black rounded-md shadow-md p-4">
-          <div class="w-9 justify-center items-center">
-            <img src="../svg/target.svg" alt="" />
+      <div class="grid grid-cols md:grid-cols-2 gap-4 m-8">
+        <div class="bg-white text-black rounded-md shadow-md p-4 flex flex-col justify-center items-center m-4">
+          <div class="flex justify-center items-center h-20 w-20">
+            <img src="../img/hp-icon.png" alt="" class="w-full h-full object-contain" />
           </div>
-          <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, deserunt!</p>
+          <h4 class="text-lg font-bold mb-2">Easy online apply</h4>
+          <p>Simplify your application process with our user-friendly online platform, making it convenient and efficient for you to submit your requests from the comfort of your home or office</p>
         </div>
-        <div class="bg-white text-black rounded-md shadow-md p-4">
-          <div class="w-9 justify-center items-center">
-            <img src="../svg/target.svg" alt="" />
+        <div class="bg-white text-black rounded-md shadow-md p-4 flex flex-col justify-center items-center mb-4">
+          <div class="flex justify-center items-center h-20 w-20">
+            <img src="../img/icon1.png" alt="" class="w-full h-full object-contain" />
           </div>
-          <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, deserunt!</p>
+          <h4 class="text-lg font-bold mb-2">Secure payment with Xendit</h4>
+          <p>Rest easy knowing that your financial transactions are protected through our partnership with Xendit, ensuring the highest level of security for all your payments and purchases.</p>
         </div>
-      </div>
-      <div class="grid grid-flow-col grid-cols gap-4 m-4">
-        <div class="bg-white text-black rounded-md shadow-md p-4 justify-center items-center">
-          <div class="w-9 justify-center items-center">
-            <img src="../svg/target.svg" alt="" />
+        <div class="bg-white text-black rounded-md shadow-md p-4 flex flex-col justify-center items-center m-4">
+          <div class="flex justify-center items-center h-20 w-20">
+            <img src="../img/icon2.png" alt="" class="w-full h-full object-contain" />
           </div>
-          <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, deserunt!</p>
+          <h4 class="text-lg font-bold mb-2">Check progress of your order</h4>
+          <p>Stay in the loop and monitor the status of your orders, allowing you to track the journey of your requests from initiation to completion, providing you with peace of mind and transparency.</p>
         </div>
-        <div class="bg-white text-black rounded-md shadow-md p-4">
-          <div class="w-9 justify-center items-center">
-            <img src="../svg/target.svg" alt="" />
+        <div class="bg-white text-black rounded-md shadow-md p-4 flex flex-col justify-center items-center m-4">
+          <div class="flex justify-center items-center h-20 w-20">
+            <img src="../img/icon3.png" alt="" class="w-full h-full object-contain" />
           </div>
-          <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, deserunt!</p>
+          <h4 class="text-lg font-bold mb-2">Get document in one click</h4>
+          <p>Experience ultimate convenience with our 'one-click' document retrieval system, enabling you to access your essential documents instantly, saving you time and effort in the process.</p>
         </div>
       </div>
     </section>
 
-    <section class="flex flex-col justify-center py-16 items-center text-center bg-cyan-900">
+    <section class="flex flex-col justify-center py-16 items-center text-center bg-gradient-to-r from-cyan-700 to-cyan-900">
       <div class="text-center text-white m-4">
-        <h3 class="text-2xl font-bold">Less effort to get your visa</h3>
-        <p>Our service ensures that you can acquire your visa with ease, saving you time and energy, so you can focus on planning and enjoying your trip without complicated paperwork and procedures.</p>
+        <h3 class="text-3xl font-mono m-2">Less effort to get your visa</h3>
+        <p class="m-2 text-gray-100" style="width: 600px">
+          Our service ensures that you can acquire your visa with ease, saving you time and energy, so you can focus on planning and enjoying your trip without complicated paperwork and procedures.
+        </p>
       </div>
 
       <div class="grid gap-4 md:grid-cols-4 m-4">
         <!-- Card 1 -->
         <div class="card m-4">
-          <div class="bg-indigo-100 md:py-20 py-32 px-8 rounded-md flex relative items-center justify-center ">
+          <div class="bg-local bg-indigo-100 md:py-20 py-32 px-8 rounded-md flex relative items-center justify-center">
             <img src="../img/visa.png" alt="" class="absolute top-2 hover:-top-4 ease-in-out transition-all" />
           </div>
           <div class="ontent mt-40 md:mt-32 sm:mt-72">
@@ -203,7 +291,7 @@
         </div>
 
         <!-- Card 4 -->
-        <div class="card md:m-4 m-10 ">
+        <div class="card md:m-4 m-10">
           <div class="bg-emerald-100 md:py-20 py-32 px-8 rounded-md flex relative items-center justify-center">
             <img src="../img/get-visa.png" alt="" class="absolute top-2 hover:-top-4 ease-in-out transition-all" />
           </div>
@@ -217,58 +305,71 @@
 
     <section id="customer-say" class="flex flex-col justify-center items-center text-center p-20 gap-4">
       <div class="text-center text-black m-4">
-        <h3 class="text-2xl font-bold">Lorem ipsum dolor sit amet.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, repellendus.</p>
+        <h3 class="text-3xl font-mono m-2">What our customer says</h3>
+        <p style="width: 600px">Hear what our clients have to say about their journeys with us, and find out why they choose our services time and time again.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 m-4 justify-center items-center text-black">
-        <div class="rounded-md shadow-md p-4 border border-gray-200 flex items-center justify-center w-80">
+        <div class="rounded-md shadow-md p-4 border border-gray-200 flex items-center justify-center w-96">
           <img src="../img/person.png" alt="Image 1" class="rounded-full w-10 h-10 m-4" />
           <div class="content text-left">
-            <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nemo nostrum expedita reiciendis iste unde sapiente exercitationem. Commodi, voluptatum laudantium.</p>
+            <h4 class="text-lg font-bold mb-2">Mark Hopus</h4>
+            <p>
+              The Get Document in One Click feature from Visa Indonesia Official is a game-changer! It's the ultimate convenience for travelers like me. The ability to track my order's progress and get my documents instantly simplified my
+              travel plans
+            </p>
           </div>
         </div>
 
-        <div class="rounded-md shadow-md p-4 border border-gray-200 flex items-center justify-center w-80">
+        <div class="rounded-md shadow-md p-4 border border-gray-200 flex items-center justify-center w-96">
           <img src="../img/person.png" alt="Image 1" class="rounded-full w-10 h-10 m-4" />
           <div class="content text-left">
-            <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nemo nostrum expedita reiciendis iste unde sapiente exercitationem. Commodi, voluptatum laudantium.</p>
+            <h4 class="text-lg font-bold mb-2">Chinmato.</h4>
+            <p>
+              The Get Document in One Click feature from Visa Indonesia Official is agame-changer! It's the ultimate convenience for travelers like me. The ability to track my order's progress and get my documents instantly simplified my
+              travel plans.
+            </p>
           </div>
         </div>
 
-        <div class="rounded-md shadow-md p-4 border border-gray-200 flex items-center justify-center w-80">
+        <div class="rounded-md shadow-md p-4 border border-gray-200 flex items-center justify-center w-96">
           <img src="../img/person.png" alt="Image 1" class="rounded-full w-10 h-10 m-4" />
           <div class="content text-left">
-            <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nemo nostrum expedita reiciendis iste unde sapiente exercitationem. Commodi, voluptatum laudantium.</p>
+            <h4 class="text-lg font-bold mb-2">Anginan Marta</h4>
+            <p>
+              Visa Indonesia Official made my recent trip à breeze. Getting my visa with less effort was a game-changer Their team's support was exceptional, ensuring I had all the necessary documents without any stress. Highly
+              recommended!.
+            </p>
           </div>
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 m-4 justify-center items-center text-black">
-        <div class="rounded-md shadow-md p-4 border border-gray-200 flex items-center justify-center w-80">
+        <div class="rounded-md shadow-md p-4 border border-gray-200 flex items-center justify-center w-96">
           <img src="../img/person.png" alt="Image 1" class="rounded-full w-10 h-10 m-4" />
           <div class="content text-left">
-            <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nemo nostrum expedita reiciendis iste unde sapiente exercitationem. Commodi, voluptatum laudantium.</p>
+            <h4 class="text-lg font-bold mb-2">Mateo Goncalo</h4>
+            <p>
+              Visa Indonesia Official made my recent trip a breeze. Getting my visa with less effort was a game-changer. Their team's support was exceptional, ensuring I had all the necessary documents without any stress. Highly
+              recommended!
+            </p>
           </div>
         </div>
-        <div class="rounded-md shadow-md p-4 border border-gray-200 flex items-center justify-center w-80">
+        <div class="rounded-md shadow-md p-4 border border-gray-200 flex items-center justify-center w-96">
           <img src="../img/person.png" alt="Image 1" class="rounded-full w-10 h-10 m-4" />
           <div class="content text-left">
-            <h4 class="text-lg font-bold mb-2">Lorem ipsum dolor sit amet.</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nemo nostrum expedita reiciendis iste unde sapiente exercitationem. Commodi, voluptatum laudantium.</p>
+            <h4 class="text-lg font-bold mb-2">Imanuel Jyanda</h4>
+            <p>
+              I'm a frequent traveler, and Visal Indonesia Official has been a true fesaver. Their efficient vise services have saved me time and energy. The secure payment with Xendit added an extra layer of confidence. I won't go anywhere
+              eise for my visa needs
+            </p>
           </div>
         </div>
       </div>
     </section>
-    <section class="flex flex-col justify-center h-screen items-center">
+    <section class="flex flex-col justify-center p-20 items-center">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 m-4">
         <div class="p-4">
-          <h1 class="max-w-2xl mb-4 text-4xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, officiis.</h1>
-          <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos fugit consectetur nostrum esse maiores temporibus culpa eveniet deserunt facilis similique..
-          </p>
+          <h1 class="max-w-2xl mb-4 mt-6 text-4xl font-mono tracking-tight leading-none md:text-4xl xl:text-5xl dark:text-white">Enjoy your vacation and don't worry about your documents</h1>
+          <p class="max-w-2xl mb-6 mt-8 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Manage your visa documents easily with us, quickly, safely. and reliably. All that just with your smartphone.</p>
           <a class="rounded-md text-blackbal text-center py-2 px-6 shadow-lg shadow-black hover:bg-white hover:text-black bg-black text-white cursor-pointer m-2" href="#"> FIND SERVICES YOU NEED </a>
         </div>
         <div class="p-4">
@@ -279,74 +380,120 @@
     <section id="question" class="flex flex-col justify-center items-center">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 m-4">
         <div class="p-4">
-          <h1 class="mb-4 text-xl font-bold tracking-tight leading-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, officiis.</h1>
-          <p class="max-w-2xl mb-6 font-light text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos fugit consectetur nostrum esse maiores temporibus culpa eveniet deserunt facilis similique..</p>
-          <div class="bg-white border border-gray-200 rounded-md py-10 w-96">
-            <img src=".." alt="" />
-            <p class="font-bold m-2 ml-4">lorem ipsum</p>
-            <p class="m-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, id.</p>
+          <p class="text-blue-600 mb-4">Support</p>
+          <h1 class="mb-4 text-xl font-bold font-mono tracking-tight leading-none">Frequently asked question</h1>
+          <p class="max-w-2xl mb-6 font-light text-gray-500 dark:text-gray-400">. Here, you'll answers to a wide range of common inquiries, providing you with the insights and clarity you need.</p>
+          <div class="bg-white border border-gray-200 rounded-md  w-96">
+            <img src="../img/person2.png" alt="" class="w-32 m-4" />
+            <p class="font-bold m-2 ml-4">Still Have Question</p>
+            <p class="m-4">Can't find the answer you're looking for? Please chat our team</p>
             <a class="rounded-full text-blackbal text-center py-2 px-6 shadow-lg shadow-black hover:bg-white hover:text-black bg-black text-white cursor-pointer m-2" href="#">GET IN TOUCH</a>
           </div>
         </div>
         <div class="p-4">
           <div class="p-4 m-4 bg-gray-100 py-4 px-10 rounded-md">
-            <p class="mb-4 font-bold text-xl">Lorem ipsum dolor sit amet.</p>
-            <div>
+            <div class="question flex justify-between items-center cursor-pointer" onclick="toggleDropdown('answer1')">
+              <p class="mb-4 font-bold text-xl">Who needs the B211A visa?</p>
+              <img src="../svg/plus.svg" alt="" class="w-4 transition-transform transform rotate-0" id="icon-answer1" />
+            </div>
+            <div id="answer1" class="hidden">
               <ol class="list-decimal m-2">
-                <li class="m-2">Now this is a story all about how, my life got flipped-turned upside down</li>
-                <li class="m-2">Now this is a story all about how, my life got flipped-turned upside down</li>
-                <li class="m-2">Now this is a story all about how, my life got flipped-turned upside down</li>
-                <li class="m-2">Now this is a story all about how, my life got flipped-turned upside down</li>
-                <li class="m-2">Now this is a story all about how, my life got flipped-turned upside down</li>
-                <li class="m-2">Now this is a story all about how, my life got flipped-turned upside down</li>
-                <li class="m-2">Now this is a story all about how, my life got flipped-turned upside down</li>
+                <li class="m-2">You want to stay in Indonesia for more than 60 days</li>
+                <li class="m-2">You don't know how long you want to stay and you want to keep the option open for longer than 60 days without having to leave the country</li>
+                <li class="m-2">After the visa, you want to apply for a KITAS (investor, marriage, pension)</li>
+                <li class="m-2">Your reason for entering the country is not for tourism purposes (e.g. volunteer work, internship, further education etc.)</li>
+                <li class="m-2">You stay longer than 30 days and travel a lot and cannot come to the Immigration Office for the extension (personal appearance important)</li>
+                <li class="m-2">You only have a temporary passport and want to enter Indonesia</li>
+                <li class="m-2">It is uncertain whether the Visa On Arrival will be granted due to your vaccination status or other formalities and you want to be on the safe side</li>
               </ol>
             </div>
           </div>
-          <div class="p-4 m-4 py-4">
-            <div class="flex">
-              <p class="m-2">Lorem ipsum dolor sit amet.</p>
-              <img src="../svg/plus.svg" alt="" class="ml-72 w-4 ">
+          <!-- Dropdown Kedua -->
+          <div class="p-4 m-4 bg-gray-100 py-4 px-10 rounded-md">
+            <div class="question flex justify-between items-center cursor-pointer" onclick="toggleDropdown('answer2')">
+              <p class="mb-4 font-bold text-xl">How long is the visa valid?</p>
+              <img src="../svg/plus.svg" alt="" class="w-4 transition-transform transform rotate-0" id="icon-answer2" />
             </div>
-            <div class="flex">
-              <p class="m-2">Lorem ipsum dolor sit amet.</p>
-              <img src="../svg/plus.svg" alt="" class="ml-72 w-4 ">
+            <div id="answer2" class="hidden">
+              <p class="m-2">The visa is valid for up to 60 days, and can be extended.</p>
             </div>
-            <div class="flex">
-              <p class="m-2">Lorem ipsum dolor sit amet.</p>
-              <img src="../svg/plus.svg" alt="" class="ml-72 w-4 ">
+          </div>
+
+          <!-- Dropdown Ketiga -->
+          <div class="p-4 m-4 bg-gray-100 py-4 px-10 rounded-md">
+            <div class="question flex justify-between items-center cursor-pointer" onclick="toggleDropdown('answer3')">
+              <p class="mb-4 font-bold text-xl">How long does it take for my visa to be ready?</p>
+              <img src="../svg/plus.svg" alt="" class="w-4 transition-transform transform rotate-0" id="icon-answer3" />
             </div>
-            <div class="flex">
-              <p class="m-2">Lorem ipsum dolor sit amet.</p>
-              <img src="../svg/plus.svg" alt="" class="ml-72 w-4 ">
+            <div id="answer3" class="hidden">
+              <p class="m-2">The visa process usually takes around 7 to 14 business days.</p>
             </div>
-            <div class="flex">
-              <p class="m-2">Lorem ipsum dolor sit amet.</p>
-              <img src="../svg/plus.svg" alt="" class="ml-72 w-4 ">
+          </div>
+          <!-- Dropdown Keempat -->
+          <div class="p-4 m-4 bg-gray-100 py-4 px-10 rounded-md">
+            <div class="question flex justify-between items-center cursor-pointer" onclick="toggleDropdown('answer4')">
+              <p class="mb-4 font-bold text-xl">How often does it happen that a visa application is rejected?</p>
+              <img src="../svg/plus.svg" alt="" class="w-4 transition-transform transform rotate-0" id="icon-answer3" />
+            </div>
+            <div id="answer4" class="hidden">
+              <p class="m-2">The visa process usually takes around 7 to 14 business days.</p>
+            </div>
+          </div>
+          <!-- Dropdown Kelima -->
+          <div class="p-4 m-4 bg-gray-100 py-4 px-10 rounded-md">
+            <div class="question flex justify-between items-center cursor-pointer" onclick="toggleDropdown('answer5')">
+              <p class="mb-4 font-bold text-xl">Who is my sponsor?</p>
+              <img src="../svg/plus.svg" alt="" class="w-4 transition-transform transform rotate-0" id="icon-answer3" />
+            </div>
+            <div id="answer5" class="hidden">
+              <p class="m-2">The visa process usually takes around 7 to 14 business days.</p>
+            </div>
+          </div>
+          <!-- Dropdown Keenam -->
+          <div class="p-4 m-4 bg-gray-100 py-4 px-10 rounded-md">
+            <div class="question flex justify-between items-center cursor-pointer" onclick="toggleDropdown('answer6')">
+              <p class="mb-4 font-bold text-xl">Do I have to go into quarantine upon entry?</p>
+              <img src="../svg/plus.svg" alt="" class="w-4 transition-transform transform rotate-0" id="icon-answer3" />
+            </div>
+            <div id="answer6" class="hidden">
+              <p class="m-2">The visa process usually takes around 7 to 14 business days.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <footer class="bg-black text-white py-40">
-      <div class="p-4 text-center">
-        <h1 class="mb-4 text-2xl font-bold tracking-tight leading-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, officiis.</h1>
-        <p class="mb-4 font-light text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <footer class="text-white py-20 bg-black">
+      <div class="p-4 mt-10 text-center">
+        <h1 class="mb-4 text-3xl font-mono tracking-tight leading-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, officiis.</h1>
+        <p class="mb-2 font-light text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       </div>
-      <div class="button my-4 gap-8 flex items-center justify-center">
+      <div class="button gap-8 flex items-center justify-center">
         <div class="rounded-full text-blackbal text-center py-2 px-6 shadow-lg shadow-black hover:bg-cyan-700 hover:text-white bg-white text-black cursor-pointer m-2 flex text-lg items-center">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 mr-2">
             <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 15.75-2.489-2.489m0 0a3.375 3.375 0 1 0-4.773-4.773 3.375 3.375 0 0 0 4.774 4.774ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
           </svg>
-          <a href="#">
-            FIND SERVICES
-          </a>
+          <a href="#"> FIND SERVICES </a>
         </div>
         <a class="rounded-full text-blackbal text-center py-3 px-8 shadow-lg shadow-black hover:bg-white hover:text-black bg-cyan-700 text-white cursor-pointer m-4 text-lg items-center" href="#">CONSULT NOW </a>
+      </div>
+      <div class="mt-16 w-full text-center text-sm">
+        <p class="text-gray-500">Copyright &copy; Visa Indonesia 2023</p>
+        <p class="text-gray-500">Design & Developed by s.p Digital</p>
       </div>
     </footer>
   </body>
   <script>
+    //bar menu
+    function toggleMenu() {
+      const menu = document.getElementById("menu-dropdown-mobile");
+      menu.classList.toggle("hidden");
+    }
+
+    function toggleDropdown(menuId) {
+      const dropdown = document.getElementById(menuId);
+      dropdown.classList.toggle("hidden");
+    }
+    //dropdown menu
     function toggleDropdown(menuId) {
       const dropdownMenu = document.getElementById(menuId);
       dropdownMenu.classList.toggle("hidden");
@@ -363,5 +510,19 @@
         });
       }
     };
+    // dropdown
+    function toggleDropdown(id) {
+      const answer = document.getElementById(id);
+      const icon = document.getElementById("icon-" + id);
+
+      // Toggle visibility
+      if (answer.classList.contains("hidden")) {
+        answer.classList.remove("hidden");
+        icon.classList.add("rotate-45"); // Rotate icon when dropdown is open
+      } else {
+        answer.classList.add("hidden");
+        icon.classList.remove("rotate-45");
+      }
+    }
   </script>
 </html>
